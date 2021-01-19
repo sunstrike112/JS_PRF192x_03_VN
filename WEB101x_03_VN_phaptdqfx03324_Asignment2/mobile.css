@@ -1,0 +1,66 @@
+.navbar{
+    background-color: #D8D8D8 !important;
+    padding: 0;
+}
+
+.navbar-brand {
+    color: blue !important;
+    padding: 0px 40px;
+}
+
+.searchicon{
+    color: black !important;
+}
+
+.navbar-toggler{
+    width: 50px;
+    height: 40px;
+    border:none;
+    padding-top:20px;
+} 
+
+.navbar-toggler .line{
+    width: 100%;
+    float: left;
+    height: 2px;
+    background-color: darkgray;
+    margin-bottom: 5px;
+}
+
+
+
+.nav-link{
+    color: blue !important;
+}
+
+#newssection .card {
+    margin: 10px 0px;
+}
+.footeremailblock input[type="email"]{
+    width:100%;
+}
+
+
+.contactitem>input,.contactitem>textarea{
+    width: 100%;
+}
+
+#aboutinfotable tr {
+    display: grid;
+}
+
+#aboutinfotable td{
+    padding:10px 0px;
+}
+
+.aboutuscard{
+    width:50%;
+}
+
+#newscontent .card{
+    margin:10px 0px;
+}
+
+table#newspost {
+    margin-top: 50px;
+}

@@ -1,0 +1,194 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #cecece;
+    }
+
+    a {
+        color: #00bd00;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .register {
+        width: 500px;
+        padding: 16px;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    .submit {
+        background-color: #0900bd;
+        color: white;
+        padding: 15px 18px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    .submit:hover {
+        opacity: 1;
+    }
+
+    .login {
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .margin-sex{
+        margin-left: 100px;
+    }
+
+    .margin-city{
+        margin-right: 20px;
+    }
+    .margin-year{
+        margin-right:30px;
+    }
+</style>
+<body>
+    <form  action="" form onsubmit="return validate()">
+        <div class="register">
+            <h1>Đăng ký</h1>
+            <p>Vui lòng điền thông tin để đăng ký</p>
+            <hr>
+                <label for="username"><b>Họ <span style="color:red">*</span> </b></label>
+                <input type="text" placeholder="Nhập họ" name="username" id="username">
+                <label for="username1"><b>Tên <span style="color:red">*</span> </b></label>
+                <input type="text" placeholder="Nhập tên" name="username1" id="username1">
+                <label for="email"><b>Email <span style="color:red">*</span> </b></label>
+                <input type="text" placeholder="Nhập địa chỉ email" name="email" id="email">
+                <label for="password"><b>Mật khẩu(6-30 ký tự) <span style="color:red">*</span></b></label>
+                <input type="password" placeholder="******" name="password" id="password">
+                <label for="password-repeat"><b>Nhập lại mật khẩu <span style="color:red">*</span></b></label>
+                <input type="password" placeholder="******" name="password-repeat" id="password-repeat">
+                <label class="margin-year" for="year"><b>Năm sinh <span style="color:red">*</span></b></label>
+                <select id="year">
+                    <option>-Chọn-    </option>
+                    <option>1991    </option>
+                    <option>1992    </option>
+                    <option>1993    </option>
+                    <option>1994    </option>
+                    <option>1995    </option>
+                </select>
+                <label class="margin-sex" for="sex"><b>Giới tính</b></label>
+                <input name="gioitinh" type="radio" value="Nam" />Nam
+                <input name="gioitinh" type="radio" value="Nữ" />Nữ<br></br>
+                <label class="margin-city" for="city"><b>Thành phố <span style="color:red">*</span></b></label>
+                <select id="city">
+                    <option>-Chọn-    </option>
+                    <option>Hà Nội    </option>
+                    <option>Hồ Chí Minh    </option>
+                    <option>Đà Nẵng    </option>
+                    <option>Quy Nhơn    </option>
+                    <option>Vũng Tàu    </option>
+                </select> 
+
+            <hr>
+            <p>Để tạo tài khoản vui lòng đồng ý với điều khoản của chúng tôi <a href="#">Terms & Privacy</a>.</p>
+            <button type="submit" class="submit">Đăng ký</button>
+        </div>
+    <div class="register login">
+    <p>Bạn đã có tài khoản rồi? <a href="#">Đăng nhập</a>.</p>
+    </div>
+    </form>
+</body>
+<script>
+    //Check email format using regular expression
+    function isEmail(email) {
+			var isValid = false;
+			var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			if(regex.test(email)) {
+				isValid = true;
+			}
+			return isValid;
+        }
+    
+    //Validate function
+    function validate() {
+        var firstName = document.getElementById("username").value;
+        var lastName = document.getElementById("username1").value;
+        var mail = document.getElementById("email").value; 
+        var year = document.getElementById("year").value; 
+        var city = document.getElementById("city").value; 
+        var password = document.getElementById("password").value;
+        var rPassword = document.getElementById("password-repeat").value;
+            
+        if(firstName == "") {
+            alert("Vui lòng nhập họ!");
+            return false;
+        }
+        if(lastName == "") {
+            alert("Vui lòng nhập tên!");
+            return false;
+        }
+        if(mail == "") {
+            alert("Vui lòng nhập email!");
+            return false;
+        }
+        if(isEmail(mail) == false) {
+            alert(mail + ' là một địa chỉ email sai');
+            return false;
+        }
+        if(password == "") {
+            alert("Vui lòng nhập mật khẩu!");
+            return false;
+        }
+        if( password.length < 6)
+        {
+            alert("Mật khẩu quá ngắn!");
+            return false;
+        }
+        if( password.length > 30)
+        {
+            alert("Mật khẩu quá dài!");
+            return false;
+        }
+        if(rPassword == "") {
+            alert("Vui lòng xác minh mật khẩu!");
+            return false;
+        }
+        if(password != rPassword){
+            alert("Mật khẩu và mật khẩu xác minh không khớp!");
+            return false;            
+        }
+        if(year == "-Chọn-") {
+            alert("Vui lòng nhập năm sinh!");
+            return false;
+        }
+        if(city == "-Chọn-") {
+            alert("Vui lòng nhập thành phố!");
+            return false;
+        }
+        alert("Chúc mừng bạn đã đăng kí thành công!");
+        return true;
+    }
+</script>
+</html>

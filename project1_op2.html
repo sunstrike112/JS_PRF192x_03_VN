@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    button:hover{
+        background-color:crimson;
+    }
+    input[type=text] {
+        width: 20%;
+        padding: 12px 20px;
+        margin: 5px 5px;
+        text-align: center;
+    }
+    input:hover{
+        background-color:cyan;
+    }
+</style>
+<body>
+   
+        <table>
+            <tr>    
+                <labbel>Chiều cao của Toàn : </labbel>
+                <input type="text" placeholder="Đơn vị m" id="h1" name="h1"><br><br>
+            </tr>
+            <tr>
+                <labbel>Cần nặng của Toàn : </labbel>
+                <input type="text" placeholder="Đơn vị kg" id="w1" name="w1"><br><br>
+            </tr>
+            <tr>
+                <labbel>Chiều cao của Minh : </labbel>
+                <input type="text" placeholder="Đơn vị m" id="h2" name="h2"><br><br> 
+            </tr>
+            <tr>
+                <labbel>Cân nặng của Minh : </labbel>              
+                <input type="text" placeholder="Đơn vị kg" id="w2" name="w2"><br><br>
+            </tr> 
+        </table>
+        <button onclick="myFunction()">Tính BMI </button><br><br>
+        <labbel>BMI của Minh : </labbel>
+        <p id="bmi1"></p>
+        <labbel>BMI của Toàn : </labbel>
+        <p id="bmi2"></p>
+        <p id="ketqua"></p>
+
+    <script>
+        function myFunction(){
+            var hToan = document.getElementById("h1").value;
+            var wToan = document.getElementById("w1").value;
+            var hMinh = document.getElementById("h2").value;
+            var wMinh = document.getElementById("w2").value;
+            var bmiToan = wToan/(hToan*hToan);  
+            var bmiMinh = wMinh/(hMinh*hMinh);
+            console.log("BMI của Toàn là : "+bmiToan);
+            console.log("BMI của Minh là : "+bmiMinh);
+            document.getElementById("bmi1").innerHTML = bmiToan;
+            document.getElementById("bmi2").innerHTML = bmiMinh;
+            if (bmiToan > bmiMinh){
+                document.getElementById("ketqua").innerHTML = "BMI của Toàn lớn hơn BMI của Minh";
+                console.log("BMI của Toàn lớn hơn BMI của Minh");
+            } else if (bmiMinh > bmiToan){
+                document.getElementById("ketqua").innerHTML = "BMI của Minh lớn hơn BMI của Toàn";
+                console.log("BMI của Minh lớn hơn BMI của Toàn");
+            } else {
+                document.getElementById("ketqua").innerHTML = "BMI của Toàn và Minh bằng nhau";
+                console.log("BMI của Toàn và Minh bằng nhau");
+            }
+        }
+    </script>
+
+</body>
+</html>

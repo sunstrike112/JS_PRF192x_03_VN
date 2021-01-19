@@ -1,0 +1,70 @@
+.aboutusimg{
+    padding:0px;
+}
+
+.banner{
+    padding: 0px;
+}
+
+.businesslist {
+    margin-left: -10px;
+}
+
+.businesslist p{
+    padding-left: 45px;
+}
+
+.sendmessagebtn {
+    position: absolute;
+    right: -50px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.searchicon {
+    padding-right: 200px;;
+}
+
+.navbar-brand{
+    padding-left: 100px;
+}
+
+#aboutussection, #newssection,#contactussection, .firstpart{
+    padding:0px 100px;
+} 
+ 
+/*  .contact,.info{
+    padding:20px 100px;
+}  */
+
+.contactitem{
+    display: list-item;
+}
+.contactitem>input, .contactitem>textarea{
+    width: 65%;;
+    float:right
+}
+
+#aboutinfotable td{
+    padding:10px 10px;
+}
+
+/* .reordercol{
+    order:4;
+}
+ */
+
+ #newscontent .col-lg-4{
+     flex: 0 0 50%;
+     max-width: 50%;
+ }
+
+ #newscontent .card{
+    margin:10px 0px;
+}
+
+table#newspost {
+    margin-top: 10px;
+}

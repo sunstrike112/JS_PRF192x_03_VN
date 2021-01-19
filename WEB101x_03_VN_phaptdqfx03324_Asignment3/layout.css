@@ -1,0 +1,149 @@
+#navigation, #welcomeimg, #ourbusinesssection,#footer{
+    padding:0px;
+}
+
+
+.navbar{
+    justify-content: center;
+}
+
+
+.searchicon{
+    color: white;
+}
+
+/*
+a:visited{
+    color: orange;
+}
+*/
+a.card-link{
+    color: black;
+}
+
+#footer{
+    background-color: black;
+}
+
+.footermainifo{
+    color: white;
+}
+
+.footercopyright{
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.categoryslist li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden; 
+}
+
+.categoryslist a{
+    text-decoration: none;  
+    color: white;
+}
+
+.languagelist li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.languagelist a{
+    text-decoration: none;
+    color:white;
+} 
+
+.businesslist a{
+    color: white;
+}
+
+.businesslist p{
+    color:white;
+}
+
+.businesslist li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+hr{
+    border: 1px solid white;
+    width:100%;
+}
+
+
+.footeremailblock input[type="email"] {
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: groove;
+    background-color: black;
+}
+
+.footermainifo {
+    padding-top: 40px;
+}
+
+ul{
+    padding-inline-start: 0px;
+}
+
+.banner{
+    width: 100%;
+    position: relative;
+    margin-left: 0px;
+}
+
+.content{
+    position:absolute;
+    width:100%;
+    top: 4px;
+}
+
+.footeremailblock{
+    flex-flow: row;
+}
+
+label{
+    font-weight: bold;
+}
+
+#contactimage{
+    padding:0px;
+}
+
+.contact,.info{
+    padding:20px 40px;
+}
+
+.contactpagesendmessagebtn{
+    float:right;
+} 
+
+#newspost td{
+    background: #c7c1c10f;
+    padding: 10px;
+}
+
+#newspost tr{
+    border-bottom: 1px solid lightgray;
+}
+
+#newspost a{
+    color:black;
+    text-decoration: none;
+}
+
+.card-body{
+    padding: 0;
+}

@@ -1,0 +1,39 @@
+.footeremailblock input[type="email"]{
+    width:100%;
+}
+
+.businesslist p{
+    padding-left: 45px;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.searchicon {
+    padding-right: 40px;;
+}
+
+.navbar-brand{
+    padding-left: 40px;
+}
+
+.contactitem{
+    display: list-item;
+}
+.contactitem>input, .contactitem>textarea{
+    width: 75%;;
+    float:right
+}
+
+td{
+    padding:10px 10px;
+}
+
+#newscontent .card{
+    margin:10px 0px;
+}
+
+table#newspost {
+    margin-top: 50px;
+}

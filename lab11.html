@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Scene change</title>
+        <style>
+        #leafers {
+            position: absolute;
+            top: 240px;
+            left: 500px;
+        }
+        #fish {
+            position: absolute;
+            top: 163px;
+            left: 7px;
+        }
+        .ow {
+                border-radius: 10px;
+                position: absolute;
+                width: 10px;
+                height: 10px;
+        }
+            
+        </style>
+    </head>
+    <body>
+
+    
+    <img src="https://www.kasandbox.org/programming-images/landscapes/beach-with-palm-trees.png" id="beach">
+
+    <img src="https://www.kasandbox.org/programming-images/avatars/leafers-seedling.png" id="leafers">
+    
+   <img src="https://www.kasandbox.org/programming-images/cute/WaterBlock.png" width="373" height="325" id="fish">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <script>
+        
+        //when leafers is clicked he says ow
+        $("#leafers").on("click", function(event){
+            //setting up text
+            var owText = $("<div>")
+            .addClass("ow")
+            .appendTo("body")
+            .text('Hasagi')
+            
+            //formating text
+            .css('color','red')
+            .css('fontSize','20px')
+            .css('width','30px')
+            .css('height','30px')
+            
+            //placing text
+            .css('top',event.pageY + 'px')
+            .css('left',event.pageX + 'px');
+        });
+        
+        //when beach is clicked crabs appear
+        $("#beach").on("click", function(event) {
+            //setting up crab pic
+            var crab = $("<img src='https://upload.wikimedia.org/wikipedia/commons/5/50/Crab-icon.png'>")
+            .addClass("beach")
+            .appendTo("body")
+            
+            //setting up size
+            .css('width','25px')
+            .css('height','25px')
+            
+            //setting up position
+            .css('position','absolute')
+            .css('top',event.pageY + 'px')
+            .css('left',event.pageX + 'px');
+        });
+        
+        //when water is clicked fish appear
+        $("#fish").on("click", function(event) {
+            //setting up fish pics
+            var sFish = $("<img src='https://upload.wikimedia.org/wikipedia/commons/e/e4/Fish_-_Puntius_sarana_from_Kerala_%28India%29.png'>")
+            .addClass("beach")
+            .appendTo("body")
+            
+            //setting up size
+            .css('width','50px')
+            .css('height','35px')
+            .css('position','absolute')
+            
+            //setting up position
+            .css('top',event.pageY + 'px')
+            .css('left',event.pageX + 'px');
+        });
+        
+    </script>
+    </body>
+</html>
